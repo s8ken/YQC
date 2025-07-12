@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Project Y - GPT Managed Repository",
@@ -18,6 +19,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'

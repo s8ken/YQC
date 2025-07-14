@@ -1,9 +1,5 @@
-import GitHubSync from "@/components/github-sync"
+import CollaborationWorkspace from "@/components/collaboration-workspace"
 
 export default function Page() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <GitHubSync />
-    </main>
-  )
+  return <CollaborationWorkspace />
 }

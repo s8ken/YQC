@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -964,6 +964,11 @@ Generated: ${timestamp}`,
       setIsPushing(false)
     }
   }
+
+  useEffect(() => {
+    // Auto-generate documentation on component mount
+    generateAndPushDocumentation()
+  }, [])
 
   return (
     <Card className="max-w-4xl mx-auto">

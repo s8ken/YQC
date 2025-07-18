@@ -1,6 +1,7 @@
 import CollaborationWorkspace from "@/components/collaboration-workspace"
 import SymbiDeployer from "@/components/symbi-deployer"
 import WebhookManager from "@/components/webhook-manager"
+import LiveCollaboration from "@/components/live-collaboration"
 
 export default function Page() {
   return (
@@ -9,6 +10,7 @@ export default function Page() {
         <SymbiDeployer />
         <WebhookManager />
         <CollaborationWorkspace />
+        <LiveCollaboration />
       </div>
     </div>
   )

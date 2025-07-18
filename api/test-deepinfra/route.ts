@@ -44,6 +44,11 @@ export async function GET() {
         tokensUsed: testResponse.usage?.total_tokens || 0,
         provider: "DeepInfra",
         pricing: "Cost-effective alternative to OpenAI",
+        rateLimits: {
+          concurrent: "200 requests (excellent for SYMBI)",
+          recommendation: "More than sufficient for current usage patterns",
+          monitoring: "Check Usage section in DeepInfra dashboard",
+        },
         capabilities: {
           llama33: true,
           mistral: true,

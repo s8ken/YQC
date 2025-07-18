@@ -5,11 +5,11 @@ export async function POST(request: NextRequest) {
     const { message, files, branch = "main" } = await request.json()
 
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-    const REPO_OWNER = process.env.REPO_OWNER // e.g., 's8ken'
-    const REPO_NAME = process.env.REPO_NAME // e.g., 'symbi'
+    const REPO_OWNER = process.env.REPO_OWNER || "s8ken" // Updated default
+    const REPO_NAME = process.env.REPO_NAME || "YQC" // Updated from 'symbi' to 'YQC'
 
     if (!GITHUB_TOKEN || !REPO_OWNER || !REPO_NAME) {
-      return NextResponse.json({ error: "Missing environment variables" }, { status: 400 })
+      return NextResponse.json({ error: "Missing environment variables for YQC repository" }, { status: 400 })
     }
 
     // Get the current commit SHA

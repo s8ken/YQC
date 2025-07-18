@@ -2,11 +2,13 @@ import CollaborationWorkspace from "@/components/collaboration-workspace"
 import SymbiDeployer from "@/components/symbi-deployer"
 import WebhookManager from "@/components/webhook-manager"
 import LiveCollaboration from "@/components/live-collaboration"
+import OpenAIKeyTester from "@/components/openai-key-tester"
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto py-8 space-y-8">
+        <OpenAIKeyTester />
         <SymbiDeployer />
         <WebhookManager />
         <CollaborationWorkspace />
